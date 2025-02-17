@@ -1,6 +1,7 @@
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import *
+from PyQt6.QtCore import Qt
 from PyQt6 import uic
 from pathlib import Path
 
@@ -20,6 +21,8 @@ class Calculadora(QMainWindow):
         uic.loadUi(f"{ruta}/Calculadora.ui", self)
 
         self.setWindowTitle("Calculadora")
+        self.setWindowIcon(QIcon(str(ruta / "calculadora.png")))
+
 
         # Conectar los botones
         self.conectarBotones()
@@ -126,21 +129,54 @@ class Calculadora(QMainWindow):
         QMessageBox.information(self, "Historial", "El historial ha sido borrado.", QMessageBox.StandardButton.Ok)
 
         
-# Ventana para el historial
 class Historial(QDialog):
     def __init__(self, historial, *args, **kwargs):
         super(Historial, self).__init__(*args, **kwargs)
+
+        ruta = Path(__file__).parent
+        uic.loadUi(f"{ruta}/Historial.ui", self)  # Cargar el diseño de Qt Designer
+
         self.setWindowTitle("Historial")
+        self.setWindowIcon(QIcon(str(ruta / "calculadora.png")))
 
-        layout = QVBoxLayout()
-        self.setLayout(layout)
 
-        self.historial_text = QTextEdit()
-        self.historial_text.setReadOnly(True)
-        layout.addWidget(self.historial_text)
+        # Acceder al QTableWidget desde el archivo .ui
+        self.historial_table = self.findChild(QTableWidget, "tableWidget")
 
-        # Cargar historial
-        self.historial_text.setText("\n".join(historial))
+        # Ajustar columnas automáticamente
+        self.historial_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+
+        header_item_1 = QTableWidgetItem("ID")
+        header_item_2 = QTableWidgetItem("Operacion")
+        header_item_3 = QTableWidgetItem("Resultado")
+
+        self.historial_table.setHorizontalHeaderItem(0, header_item_1)
+        self.historial_table.setHorizontalHeaderItem(1, header_item_2)
+        self.historial_table.setHorizontalHeaderItem(2, header_item_3)
+
+        # Llenar tabla con historial
+        self.cargar_historial(historial)
+
+    def cargar_historial(self, historial):
+        self.historial_table.setRowCount(len(historial))  
+        for i, entrada in enumerate(historial):
+            if "=" in entrada:
+                operacion, resultado = entrada.split("=")
+                # Crear y centrar los items
+                id_item = QTableWidgetItem(str(i + 1))
+                operacion_item = QTableWidgetItem(operacion.strip())
+                resultado_item = QTableWidgetItem(resultado.strip())
+                
+                # Centrar el texto
+                id_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                operacion_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                resultado_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                
+                # Establecer los elementos en las celdas
+                self.historial_table.setItem(i, 0, id_item)  
+                self.historial_table.setItem(i, 1, operacion_item)  
+                self.historial_table.setItem(i, 2, resultado_item) 
+
    
     
 

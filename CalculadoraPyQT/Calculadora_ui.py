@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Calculadora.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -23,17 +23,35 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(300, 400)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QSize(300, 400))
         MainWindow.setMaximumSize(QSize(300, 400))
+        MainWindow.setStyleSheet(u"QMainWindow {\n"
+"	background-color: #282828;\n"
+"}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(19, 10, 271, 51))
+        self.label.setGeometry(QRect(0, 0, 301, 61))
+        self.label.setStyleSheet(u"QWidget {\n"
+"	padding-right: 20px;\n"
+"	padding-top: 15px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"	background-color: #282828;\n"
+"}")
         self.label.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.widget = QWidget(self.centralwidget)
         self.widget.setObjectName(u"widget")
         self.widget.setGeometry(QRect(0, 60, 300, 321))
+        self.widget.setStyleSheet(u"QWidget {\n"
+"	background-color: #282828;\n"
+"}")
         self.gridLayoutWidget = QWidget(self.widget)
         self.gridLayoutWidget.setObjectName(u"gridLayoutWidget")
         self.gridLayoutWidget.setGeometry(QRect(10, 10, 281, 301))
@@ -43,12 +61,22 @@ class Ui_MainWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.pushButton_raiz = QPushButton(self.gridLayoutWidget)
         self.pushButton_raiz.setObjectName(u"pushButton_raiz")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_raiz.sizePolicy().hasHeightForWidth())
         self.pushButton_raiz.setSizePolicy(sizePolicy)
         self.pushButton_raiz.setMinimumSize(QSize(40, 40))
+        self.pushButton_raiz.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_raiz, 1, 2, 1, 1)
 
@@ -57,6 +85,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_clear.sizePolicy().hasHeightForWidth())
         self.pushButton_clear.setSizePolicy(sizePolicy)
         self.pushButton_clear.setMinimumSize(QSize(40, 40))
+        self.pushButton_clear.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_clear, 0, 2, 1, 1)
 
@@ -65,6 +106,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_par_izq.sizePolicy().hasHeightForWidth())
         self.pushButton_par_izq.setSizePolicy(sizePolicy)
         self.pushButton_par_izq.setMinimumSize(QSize(40, 40))
+        self.pushButton_par_izq.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_par_izq, 1, 0, 1, 1)
 
@@ -73,6 +127,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_del.sizePolicy().hasHeightForWidth())
         self.pushButton_del.setSizePolicy(sizePolicy)
         self.pushButton_del.setMinimumSize(QSize(40, 40))
+        self.pushButton_del.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_del, 0, 3, 1, 1)
 
@@ -81,6 +148,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_ce.sizePolicy().hasHeightForWidth())
         self.pushButton_ce.setSizePolicy(sizePolicy)
         self.pushButton_ce.setMinimumSize(QSize(40, 40))
+        self.pushButton_ce.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_ce, 0, 1, 1, 1)
 
@@ -89,6 +169,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_par_der.sizePolicy().hasHeightForWidth())
         self.pushButton_par_der.setSizePolicy(sizePolicy)
         self.pushButton_par_der.setMinimumSize(QSize(40, 40))
+        self.pushButton_par_der.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_par_der, 1, 1, 1, 1)
 
@@ -97,6 +190,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_1.sizePolicy().hasHeightForWidth())
         self.pushButton_1.setSizePolicy(sizePolicy)
         self.pushButton_1.setMinimumSize(QSize(40, 40))
+        self.pushButton_1.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_1, 4, 0, 1, 1)
 
@@ -105,6 +211,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_div.sizePolicy().hasHeightForWidth())
         self.pushButton_div.setSizePolicy(sizePolicy)
         self.pushButton_div.setMinimumSize(QSize(40, 40))
+        self.pushButton_div.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_div, 1, 3, 1, 1)
 
@@ -113,6 +232,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_7.sizePolicy().hasHeightForWidth())
         self.pushButton_7.setSizePolicy(sizePolicy)
         self.pushButton_7.setMinimumSize(QSize(40, 40))
+        self.pushButton_7.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_7, 2, 0, 1, 1)
 
@@ -121,6 +253,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
         self.pushButton_4.setSizePolicy(sizePolicy)
         self.pushButton_4.setMinimumSize(QSize(40, 40))
+        self.pushButton_4.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_4, 3, 0, 1, 1)
 
@@ -129,6 +274,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_porc.sizePolicy().hasHeightForWidth())
         self.pushButton_porc.setSizePolicy(sizePolicy)
         self.pushButton_porc.setMinimumSize(QSize(40, 40))
+        self.pushButton_porc.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_porc, 0, 0, 1, 1)
 
@@ -137,6 +295,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_hist.sizePolicy().hasHeightForWidth())
         self.pushButton_hist.setSizePolicy(sizePolicy)
         self.pushButton_hist.setMinimumSize(QSize(40, 40))
+        self.pushButton_hist.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_hist, 5, 0, 1, 1)
 
@@ -145,6 +316,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
         self.pushButton_8.setSizePolicy(sizePolicy)
         self.pushButton_8.setMinimumSize(QSize(40, 40))
+        self.pushButton_8.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_8, 2, 1, 1, 1)
 
@@ -153,6 +337,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_9.sizePolicy().hasHeightForWidth())
         self.pushButton_9.setSizePolicy(sizePolicy)
         self.pushButton_9.setMinimumSize(QSize(40, 40))
+        self.pushButton_9.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_9, 2, 2, 1, 1)
 
@@ -161,6 +358,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_mul.sizePolicy().hasHeightForWidth())
         self.pushButton_mul.setSizePolicy(sizePolicy)
         self.pushButton_mul.setMinimumSize(QSize(40, 40))
+        self.pushButton_mul.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_mul, 2, 3, 1, 1)
 
@@ -169,6 +379,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
         self.pushButton_5.setSizePolicy(sizePolicy)
         self.pushButton_5.setMinimumSize(QSize(40, 40))
+        self.pushButton_5.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_5, 3, 1, 1, 1)
 
@@ -177,6 +400,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_6.sizePolicy().hasHeightForWidth())
         self.pushButton_6.setSizePolicy(sizePolicy)
         self.pushButton_6.setMinimumSize(QSize(40, 40))
+        self.pushButton_6.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_6, 3, 2, 1, 1)
 
@@ -185,6 +421,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
         self.pushButton_2.setSizePolicy(sizePolicy)
         self.pushButton_2.setMinimumSize(QSize(40, 40))
+        self.pushButton_2.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_2, 4, 1, 1, 1)
 
@@ -193,6 +442,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
         self.pushButton_3.setSizePolicy(sizePolicy)
         self.pushButton_3.setMinimumSize(QSize(40, 40))
+        self.pushButton_3.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_3, 4, 2, 1, 1)
 
@@ -201,6 +463,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_res.sizePolicy().hasHeightForWidth())
         self.pushButton_res.setSizePolicy(sizePolicy)
         self.pushButton_res.setMinimumSize(QSize(40, 40))
+        self.pushButton_res.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_res, 3, 3, 1, 1)
 
@@ -209,6 +484,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_sum.sizePolicy().hasHeightForWidth())
         self.pushButton_sum.setSizePolicy(sizePolicy)
         self.pushButton_sum.setMinimumSize(QSize(40, 40))
+        self.pushButton_sum.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_sum, 4, 3, 1, 1)
 
@@ -217,6 +505,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_0.sizePolicy().hasHeightForWidth())
         self.pushButton_0.setSizePolicy(sizePolicy)
         self.pushButton_0.setMinimumSize(QSize(40, 40))
+        self.pushButton_0.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_0, 5, 1, 1, 1)
 
@@ -225,6 +526,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_punto.sizePolicy().hasHeightForWidth())
         self.pushButton_punto.setSizePolicy(sizePolicy)
         self.pushButton_punto.setMinimumSize(QSize(40, 40))
+        self.pushButton_punto.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_punto, 5, 2, 1, 1)
 
@@ -233,6 +547,19 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.pushButton_igual.sizePolicy().hasHeightForWidth())
         self.pushButton_igual.setSizePolicy(sizePolicy)
         self.pushButton_igual.setMinimumSize(QSize(40, 40))
+        self.pushButton_igual.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid #bf0000;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"	font-size: 20px;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QPushButton#pushButton_hist,\n"
+"QPushButton#pushButton_igual {\n"
+"	background-color: #bf0000;\n"
+"}\n"
+"")
 
         self.gridLayout.addWidget(self.pushButton_igual, 5, 3, 1, 1)
 
